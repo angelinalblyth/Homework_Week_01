@@ -16,7 +16,7 @@ def pets_sold(shop)
 end
 # 6th Problem
 def increase_pets_sold(shop,sold_pets)
-  shop[:admin][:pets_sold] = sold_pets
+  shop[:admin][:pets_sold] += sold_pets
 end
 # 7th Problem
 def stock_count(shop)
@@ -34,6 +34,7 @@ def pets_by_breed(shop, breed)
   end
   return pet_breed
 end
+
 # 10th and 11th Problem
 # Want to iterate over the pet names
 # Check if the name equals the name being searched
@@ -108,5 +109,12 @@ def customer_can_afford_pet(customer, new_pet)
   else
     return false
   end
+end
 
+# 2nd optional Problem
+def sell_pet_to_customer(shop, pet, customer)
+  add_pet_to_customer(customer, pet)
+  increase_pets_sold(shop, 1)
+  remove_customer_cash(customer, pet[:price])
+  add_or_remove_cash(shop, pet[:price])
 end
