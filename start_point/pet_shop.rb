@@ -94,3 +94,19 @@ def add_pet_to_customer(customer, new_pet)
   customer[:pets].push(new_pet)
   customer[:pets].length
 end
+
+# # OPTIONAL
+
+# 1st opitonal Problem
+
+# check customer cash == pet price
+# if true
+# p "Can buy"
+def customer_can_afford_pet(customer, new_pet)
+  if customer[:cash] == new_pet[:price]
+    return true
+  else
+    return false
+  end
+
+end
