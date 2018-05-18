@@ -75,3 +75,11 @@ end
 def customer_cash(customer)
   customer[:cash]
 end
+
+
+# 15th Problem
+
+def remove_customer_cash(customer, amount)
+  customer[:cash] -= amount
+
+end
