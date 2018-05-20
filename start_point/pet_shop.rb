@@ -92,8 +92,8 @@ end
 # 17th Problem
 
 def add_pet_to_customer(customer, new_pet)
-  customer[:pets].push(new_pet)
-  customer[:pets].length
+  customer[:pets].push(new_pet).length
+  # customer[:pets].length
 end
 
 # # OPTIONAL
